@@ -330,7 +330,7 @@
 			<div class="row p-0 m-0">
 				<div class="col-md-12">
 					<div class="wthree_title_agile">
-						<h4 class="font-2 c-cafe text-uppercase titulo-1 _animate__zoomIn">Agradecemos a...</h4>
+						<h4 class="font-3 c-cafe text-uppercase titulo-1 _animate__zoomIn">Agradecemos a...</h4>
 						<span class="linea _animate__flipInX"></span>
 					</div>
 				</div>
@@ -613,10 +613,13 @@
    
     <div class="formulario">
         <div class="lista">
-            <h4 class="font-3 _animate__fadeInUp animate__delay-1s" style="color: #000;">Añade el numero de invitados de tu parte (Incluyéndote a ti) <br>
+            <h4 class="font-3 _animate__fadeInUp animate__delay-1s" style="color: #000;">Busca tu nombre o apellido de tu familia y añade el numero de invitados de tu parte (Incluyéndote a ti) <br>
 
                 El numero de pases confirmados será enviado a nuestro correo</h4>
         </div>
+
+        
+        
  <div class="formpases">
 <form id="form_pases" onsubmit="confirmarPases()">
        
@@ -748,6 +751,7 @@
     
 </form>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
     (function () {
         // https://dashboard.emailjs.com/admin/account
@@ -925,8 +929,8 @@
         var pases = familias[key];
 
         var data = {
-            service_id: 'service_87rd4lu',
-            template_id: 'template_s4fc7m5',
+            service_id: 'service_vpxtdfq',
+            template_id: 'template_2olsyoj',
             user_id: '_h-7j3Vw6TfyEG95q',
             template_params: {
                 'familia': key,
@@ -945,6 +949,12 @@
         });
     }
 </script>
+
+                        <!-- Confirmar Asistencia-->
+
+
+                   
+            
 </div>
 
 </div>
@@ -1053,6 +1063,28 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
+
+
+     // Configurar mensaje de email
+            /// TODO: revisar si este mensaje esta bien
+            var mensaje = pases <= 0 ? "Confirma NO asistencia" : "Confirma asistencia, pases: " + pases;
+
+            // Enviar email
+            /// TODO: actualizar email: https://dashboard.emailjs.com/admin/templates/i7pldfq
+            emailjs.send('service_vpxtdfq', 'template_2olsyoj', {
+                'familia': familiaOrg,
+                'mensaje': mensaje
+            }).then(function () {
+                // Avisar de email enviado
+                alert('Confirmación enviada!');
+
+                // Remover form de pases, para que no lo puedan enviar (a menos que refresquen la página)
+                $("#form_pases").remove();
+            }, function (error) {
+                // TODO: Mostrar algun error
+                alert('Oops... ' + JSON.stringify(error));
+            });
+        }
 
     
 
