@@ -700,14 +700,6 @@
                         </div>
 
                         <div id="form_pases">
-                            <!-- Busqueda -->
-                            <label id="form_label">Ingresa tu nombre completo:</label>
-                            <input id="campo_nombre_familia" type="text" />
-                            <br />
-                            <button id="boton_nombre_familia" onsubmit="">Buscar</button>
-                            <br />
-                            <br />
-
                             <!-- Selector -->
                             <label id="form_label">O selecciona de la siguiente lista:</label>
                             <select id="selector_familia">
@@ -1090,26 +1082,6 @@
 
             // Seleccionar familia y mostrar pases
             familiaSeleccionada(familiaOrg, familia);
-        });
-
-        // Reaccionar al click del boton de busqueda de familia
-        $('#boton_nombre_familia').click(function () {
-            // Obtener el nombre que se esccribió
-            var familia = $("#campo_nombre_familia").val();
-
-            // Formatear nombre, ej: "Juan Perez" a "juan_perez"
-            var familiaOrg = familia;
-            familia = familia.toLowerCase().replace(' ', '_');
-
-            // Revisar si existe la familia
-            var existe = Object.keys(familias).find(key => key === familia);
-            if (existe) {
-                // Seleccionar familia y mostrar pases
-                familiaSeleccionada(familiaOrg, familia);
-            } else {
-                // TODO: Agregar algo aqui de html o una alerta
-                console.error("no se encontró: " + familia)
-            }
         });
 
         function familiaSeleccionada(familiaOrg, familia) {
