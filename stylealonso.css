@@ -58,3 +58,58 @@
   padding: 5%;
   margin: auto;
 }
+
+
+.flex-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffd3afb5;
+  height: 500px;
+  padding: 50px;
+  
+
+}
+
+
+
+.formulario {
+  
+  display: flex;
+  flex-direction: column;
+  
+  width: auto;
+  height: 450px;
+ 
+  padding: 20px;
+  border-radius: 10px;
+  border: #313233;
+  stroke: #000;
+
+}
+
+.lista {
+  display: flex;
+  font-family:'HerrVonMuellerhoff','sans-serif' !important;
+  font-size: 10px; 
+  text-align: center;
+  justify-content: center;
+}
+
+.formpases {
+  text-align: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+  
+
