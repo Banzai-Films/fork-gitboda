@@ -98,10 +98,12 @@
 
 .formpases {
   display: flex;
+  
  
   text-align: center;
   justify-content: center;
   padding-top: 20px;
+
 }
 
 .formbusqueda {
