@@ -61,6 +61,8 @@
 </head>
 
 <body id="token" data-token="221334a7bd9872f6ca27fd08f5cb605f" data-tokeninvitado="">
+    
+    
 
     <!-- Historia -->
     <div class="about_section bg-2-img">
@@ -776,8 +778,11 @@
 
             </div>
 
-        
-
+            <audio controls autoplay loop preload>
+                <source src="./Michael Bublé - Everything (SUBTITULADA AL ESPAÑOL).mp3" type="audio/mpeg">
+                <source src="./Michael Bublé - Everything (SUBTITULADA AL ESPAÑOL)_01.ogg" type="audio/ogg">
+            </audio>
+         
     </div>
 
     <script type="text/javascript" src="./jquery-2.1.4.min.js"></script><!-- Required-js -->
@@ -824,20 +829,7 @@
 
             });
 
-            $('#musica').on('click', function () {
-                let x = document.getElementById("audio");
-                if ($('.musica').hasClass('play')) {
-                    $('.musica').removeClass('play');
-                    $(this).find('i').removeClass('fa-music').addClass('fa-volume-off');
-                    x.pause();
-                } else {
-                    $('.musica').addClass('play');
-                    $(this).find('i').removeClass('fa-volume-off').addClass('fa-music');
-                    x.play();
-                }
-            });
-
-        });
+            
 
         var d = new Date(new Date().getTime() + 948 * 120 * 120 * 2000);
         //jQuery example
@@ -936,50 +928,49 @@
             "goya_quintero": 2,
             "guadalupe_vazquez": 2,
             "infante_plascencia": 4,
-            "iralanda_orozco_magdaleno": 2,
+            "irlanda_orozco": 2, 
             "ivan_hernandez": 2,
             "jauregui_gonzalez": 2,
             "jimenez": 2,
             "jonas_solis": 2,
-            "juan_diego_gomez": 2,
+            "juan_gomez": 2,
             "juarez_caballero": 2,
             "juarez_velazquez": 3,
-            "julia_baltazar_mary_baltazar": 2,
+            "juliaymary_baltazar": 2,
             "julio_montoya": 2,
             "laura_lara": 1,
             "lazaro_palacios": 2,
             "leon": 3,
             "leticia_flores": 1,
             "leticia_quintero": 2,
-            "licona1": 2,
-            "licona2": 2,
+            "licona": 2,
             "lopez_magdaleno": 3,
             "luis_miguel": 2,
-            "magdaeno_americano": 2,
-            "magdaeno_garcia": 3,
-            "magdaeno_gonzales": 2,
-            "magdaeno_macias": 4,
-            "magdaeno_pedroza": 3,
-            "magdaeno_plascencia": 3,
+            "magdaleno_americano": 2,
+            "magdaleno_garcia": 3,
+            "magdaleno_macias": 4,
+            "magdaleno_pedroza": 3,
+            "magdaleno_plascencia": 3,
             "magdaleno_reyes": 2,
             "magdaleno_sanchez": 4,
             "magdaleno_vazquez": 1,
+            "magdaleno_gonzales": 2,
             "marco_franco": 2,
             "mario_figueroa": 2,
             "martin_marin": 2,
-            "mezaplascencia": 2,
+            "meza_plascencia": 2,
             "michel_loza": 2,
-            "miguel_gomes": 2,
+            "miguel_gomez": 2,
             "miguel_vera": 2,
             "miguel": 2,
-            "nayeli_jminez": 2,
+            "nayeli_jimenez": 2,
             "nelson_tado": 1,
             "noriega_magdaleno": 2,
             "oscar_torrez": 2,
             "palacios_baltazar": 3,
             "paola_rodriguez": 2,
             "patricia_magdaleno": 2,
-            "pedroza_de_lira": 3,
+            "pedrozadelira": 3,
             "plascencia_escoto": 4,
             "plascencia_franco": 5,
             "plascencia_gomez": 3,
@@ -995,10 +986,10 @@
             "rodriguez_gomez": 3,
             "rodriguez_magdaleno": 2,
             "ruben_norma": 2,
-            "ruiz_cardenas": 2,
+            "ruiz_cadenas": 2,
             "ruvalcaba_vera": 2,
             "salazar_quintana": 2,
-            "sandra_madrigal_miguel": 2,
+            "sandra_madrigal": 2,
             "sergio_quintero": 1,
             "silva_quintero": 4,
             "sonia_serrano": 2,
@@ -1008,12 +999,13 @@
             "vera_franco": 3,
             "victor_gomez": 2,
             "victor_vera": 2,
-            "xochilt_hernandez": 3,
+            "zochilt_hernandez": 3,
             "yolanda_galindo": 2,
             "christian_garcia": 1,
             "oscar_garcia": 1,
-            "elvia_americano_y_esposo": 2,
-            "jesus_duran_y_co": 2
+            "elvia_americano": 2,
+            "jesus_duran": 2
+            
 
         }
 
