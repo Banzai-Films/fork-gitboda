@@ -3,19 +3,19 @@ const hours = document.getElementById("hours");
 const mins = document.getElementById("mins");
 const seconds = document.getElementById("seconds");
 
-const newYear = '17 june 2022';
+const newYear = '20 august 2022';
 
-function countTimer(){
+function countTimer() {
     const newYearDate = new Date(newYear);
     const currentDate = new Date();
 
-    const totalSeconds = (newYearDate - currentDate) / 1000;
+    const totalSeconds = Math.max((newYearDate - currentDate) / 1000, 0);
 
     const daysCalc = Math.floor(totalSeconds / 3600 / 24);
     const hoursCalc = Math.floor(totalSeconds / 3600) % 24;
     const minsCalc = Math.floor(totalSeconds / 60) % 60;
     const secondsCalc = Math.floor(totalSeconds % 60);
-    
+
     days.innerHTML = daysCalc;
     hours.innerHTML = hoursCalc;
     mins.innerHTML = minsCalc;
